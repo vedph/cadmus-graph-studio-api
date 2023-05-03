@@ -8,7 +8,7 @@ using System.Diagnostics;
 namespace CadmusGraphStudioApi.Controllers;
 
 [ApiController]
-[Route("mappings")]
+[Route("api/mappings")]
 public class MappingController : ControllerBase
 {
     private readonly JsonNodeMapper _mapper;

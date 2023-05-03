@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace CadmusGraphStudioApi.Controllers;
 
 [ApiController]
-[Route("jmes")]
+[Route("api/jmes")]
 public sealed class JmesController : ControllerBase
 {
     [HttpPost("transform")]
