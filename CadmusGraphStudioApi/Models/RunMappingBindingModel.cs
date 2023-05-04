@@ -12,7 +12,7 @@ public sealed class RunMappingBindingModel
     public string Source { get; set; }
 
     [Required]
-    public List<NodeMapping> Mappings { get; set; }
+    public List<NodeMappingBindingModel> Mappings { get; set; }
 
     public string ItemId { get; set; }
     public string PartId { get; set; }
@@ -26,7 +26,7 @@ public sealed class RunMappingBindingModel
     public RunMappingBindingModel()
     {
         Source = "";
-        Mappings = new List<NodeMapping>();
+        Mappings = new List<NodeMappingBindingModel>();
         FacetId = "default";
         ItemId = Guid.NewGuid().ToString();
         ItemUri = "x:item";

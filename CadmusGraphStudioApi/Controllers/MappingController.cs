@@ -42,8 +42,8 @@ public class MappingController : ControllerBase
             // apply mappings
             await Task.Run(() =>
             {
-                foreach (NodeMapping mapping in model.Mappings)
-                    _mapper.Map(model.Source, mapping, set);
+                foreach (var mapping in model.Mappings)
+                    _mapper.Map(model.Source, mapping.ToNodeMapping(), set);
             });
 
             return new ErrorWrapper<GraphSet> { Value = set };
