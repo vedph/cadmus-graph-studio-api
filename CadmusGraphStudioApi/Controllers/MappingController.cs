@@ -1,7 +1,6 @@
 ﻿using Cadmus.Graph;
 using CadmusGraphStudioApi.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using System;
 using System.Diagnostics;
 
@@ -9,7 +8,7 @@ namespace CadmusGraphStudioApi.Controllers;
 
 [ApiController]
 [Route("api/mappings")]
-public class MappingController : ControllerBase
+public sealed class MappingController : ControllerBase
 {
     private readonly JsonNodeMapper _mapper;
 
@@ -19,8 +18,7 @@ public class MappingController : ControllerBase
     }
 
     [HttpPost("run")]
-    public async Task<ErrorWrapper<GraphSet>> RunAsync(
-        [FromBody] RunMappingBindingModel model)
+    public ErrorWrapper<GraphSet> Run([FromBody] RunMappingBindingModel model)
     {
         try
         {
@@ -40,11 +38,8 @@ public class MappingController : ControllerBase
             _mapper.Data["part-id"] = Guid.NewGuid().ToString();
 
             // apply mappings
-            await Task.Run(() =>
-            {
-                foreach (var mapping in model.Mappings)
-                    _mapper.Map(model.Source, mapping.ToNodeMapping(), set);
-            });
+            foreach (var mapping in model.Mappings)
+                _mapper.Map(model.Source, mapping.ToNodeMapping(), set);
 
             return new ErrorWrapper<GraphSet> { Value = set };
         }
