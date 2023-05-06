@@ -40,6 +40,8 @@ public sealed class MappingController : ControllerBase
             // mock metadata from part
             _mapper.Data[PartGraphSourceAdapter.M_PART_ID] = model.PartId
                 ?? Guid.NewGuid().ToString();
+            if (model.PartTypeId != null)
+                _mapper.Data[PartGraphSourceAdapter.M_PART_TYPE_ID] = model.PartTypeId;
             if (model.RoleId != null)
                 _mapper.Data[PartGraphSourceAdapter.M_PART_ROLE_ID] = model.RoleId;
 
