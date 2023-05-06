@@ -18,6 +18,7 @@ public sealed class RunMappingBindingModel
     public string? PartTypeId { get; set; }
     public string? RoleId { get; set; }
     public string FacetId { get; set; }
+    public string? ItemTitle { get; set; }
     public string ItemUri { get; set; }
     public string ItemLabel { get; set; }
     public string? ItemEid { get; set; }
