@@ -1,4 +1,5 @@
 ﻿using Cadmus.Graph;
+using Cadmus.Graph.Adapters;
 using CadmusGraphStudioApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -27,15 +28,20 @@ public sealed class MappingController : ControllerBase
             _mapper.Data.Clear();
 
             // mock metadata from item
-            _mapper.Data["item-id"] = Guid.NewGuid().ToString();
+            _mapper.Data[ItemGraphSourceAdapter.M_ITEM_ID] = model.ItemId
+                ?? Guid.NewGuid().ToString();
             if (model.ItemEid != null) _mapper.Data["item-eid"] = model.ItemEid;
             _mapper.Data["item-uri"] = model.ItemUri;
             _mapper.Data["item-label"] = model.ItemLabel;
             if (model.GroupId != null) _mapper.Data["group-id"] = model.GroupId;
-            _mapper.Data["facet-id"] = model.FacetId;
+            _mapper.Data[ItemGraphSourceAdapter.M_ITEM_FACET] = model.FacetId;
             if (model.Flags != null) _mapper.Data["flags"] = model.Flags;
-            // mock metada from part
-            _mapper.Data["part-id"] = Guid.NewGuid().ToString();
+
+            // mock metadata from part
+            _mapper.Data[PartGraphSourceAdapter.M_PART_ID] = model.PartId
+                ?? Guid.NewGuid().ToString();
+            if (model.RoleId != null)
+                _mapper.Data[PartGraphSourceAdapter.M_PART_ROLE_ID] = model.RoleId;
 
             // apply mappings
             foreach (var mapping in model.Mappings)

@@ -1,5 +1,4 @@
-﻿using Cadmus.Graph;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,6 +15,7 @@ public sealed class RunMappingBindingModel
 
     public string ItemId { get; set; }
     public string PartId { get; set; }
+    public string? RoleId { get; set; }
     public string FacetId { get; set; }
     public string ItemUri { get; set; }
     public string ItemLabel { get; set; }
