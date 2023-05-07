@@ -8,9 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["CadmusGraphStudioApi/CadmusGraphStudioApi.csproj", "CadmusGraphStudioApi/"]
-# copy local packages to avoid using a NuGet custom feed, then restore
-COPY ./local-packages /src/local-packages
-RUN dotnet restore "CadmusGraphStudioApi/CadmusGraphStudioApi.csproj" -s /src/local-packages -s https://api.nuget.org/v3/index.json --verbosity n
+RUN dotnet restore "CadmusGraphStudioApi/CadmusGraphStudioApi.csproj" -s https://api.nuget.org/v3/index.json --verbosity d
 # copy the content of the API project
 COPY . .
 # build it
