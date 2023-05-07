@@ -51,8 +51,11 @@ public sealed class MappingController : ControllerBase
                 _mapper.Data[PartGraphSourceAdapter.M_PART_ROLE_ID] = model.RoleId;
 
             // apply mappings
-            foreach (var mapping in model.Mappings)
-                _mapper.Map(model.Source, mapping.ToNodeMapping(), set);
+            foreach (NodeMappingBindingModel mapping in model.Mappings)
+            {
+                NodeMapping m = mapping.ToNodeMapping();
+                _mapper.Map(model.Source, m, set);
+            }
 
             return new ErrorWrapper<GraphSet> { Value = set };
         }
