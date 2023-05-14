@@ -64,7 +64,9 @@ public sealed class Program
             ConfigureCorsServices(builder.Services, builder.Configuration);
 
             // add services to the container
-            builder.Services.AddControllers();
+            builder.Services.AddControllers(options =>
+                // register custom exception filter
+                options.Filters.Add(new CustomExceptionFilterAttribute()));
 
             // Swagger/OpenAPI: https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
