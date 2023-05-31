@@ -30,10 +30,10 @@ public sealed class RunMappingBindingModel
     {
         Source = "";
         Mappings = new List<NodeMappingBindingModel>();
-        FacetId = "default";
+        FacetId = "";
         ItemId = Guid.NewGuid().ToString();
-        ItemUri = "x:item";
-        ItemLabel = "My Item";
+        ItemUri = "";
+        ItemLabel = "";
         PartId = Guid.NewGuid().ToString();
     }
 }
