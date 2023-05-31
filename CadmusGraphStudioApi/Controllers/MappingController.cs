@@ -1,5 +1,6 @@
 ﻿using Cadmus.Graph;
 using Cadmus.Graph.Adapters;
+using Cadmus.Graph.Extras;
 using CadmusGraphStudioApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -35,8 +36,15 @@ public sealed class MappingController : ControllerBase
                 _mapper.Data[ItemGraphSourceAdapter.M_ITEM_TITLE] = model.ItemTitle;
             if (model.GroupId != null)
                 _mapper.Data[ItemGraphSourceAdapter.M_ITEM_GROUP] = model.GroupId;
+
             // this is an extension
-            if (model.ItemEid != null) _mapper.Data["item-eid"] = model.ItemEid;
+            if (model.ItemEid != null)
+                _mapper.Data[ItemEidMetadataSource.ITEM_EID_KEY] = model.ItemEid;
+            if (model.MetadataPid != null)
+            {
+                _mapper.Data[ItemEidMetadataSource.METADATA_PART_ID_KEY] =
+                    model.MetadataPid;
+            }
 
             if (model.Flags != null) _mapper.Data["flags"] = model.Flags;
             _mapper.Data["item-uri"] = model.ItemUri;

@@ -13,7 +13,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 		<PackageReference Include="Cadmus.Graph" Version="2.2.5" />
-		<PackageReference Include="Cadmus.Graph.Extras" Version="2.2.5" />
+		<PackageReference Include="Cadmus.Graph.Extras" Version="2.2.8" />
 	</ItemGroup>
 
 </Project>

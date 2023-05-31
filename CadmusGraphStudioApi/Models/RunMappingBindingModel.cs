@@ -22,6 +22,7 @@ public sealed class RunMappingBindingModel
     public string ItemUri { get; set; }
     public string ItemLabel { get; set; }
     public string? ItemEid { get; set; }
+    public string? MetadataPid { get; set; }
     public string? GroupId { get; set; }
     public string? Flags { get; set; }
 
