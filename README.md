@@ -12,6 +12,8 @@ docker build . -t vedph2020/cadmus-graph-studio-api:0.0.7 -t vedph2020/cadmus-gr
 
 ## History
 
+- 2023-06-14: updated packages.
+
 ### 0.0.7
 
 - 2023-05-31: updated packages and added metadata pid to received metadata.
