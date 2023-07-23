@@ -12,8 +12,8 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-		<PackageReference Include="Cadmus.Graph" Version="2.4.0" />
-		<PackageReference Include="Cadmus.Graph.Extras" Version="2.4.0" />
+		<PackageReference Include="Cadmus.Graph" Version="3.0.1" />
+		<PackageReference Include="Cadmus.Graph.Extras" Version="3.0.1" />
 	</ItemGroup>
 
 </Project>
