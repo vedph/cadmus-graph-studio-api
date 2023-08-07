@@ -85,6 +85,11 @@ public sealed class NodeMappingBindingModel
     public string? Sid { get; set; }
 
     /// <summary>
+    /// Gets or sets the scalar pattern.
+    /// </summary>
+    public string? ScalarPattern { get; set; }
+
+    /// <summary>
     /// The output of this mapping.
     /// </summary>
     public NodeMappingOutputBindingModel? Output { get; set; }
@@ -117,6 +122,7 @@ public sealed class NodeMappingBindingModel
             Description = Description,
             Source = Source,
             Sid = Sid,
+            ScalarPattern = ScalarPattern,
             Output = Output?.ToNodeMappingOutput(),
             Children = Children?.Select(m => m.ToNodeMapping())?.ToArray()
                 ?? Array.Empty<NodeMapping>()
