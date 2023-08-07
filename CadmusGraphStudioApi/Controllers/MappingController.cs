@@ -1,4 +1,5 @@
-﻿using Cadmus.Graph;
+﻿using Cadmus.Codicology.Graph;
+using Cadmus.Graph;
 using Cadmus.Graph.Adapters;
 using Cadmus.Graph.Extras;
 using CadmusGraphStudioApi.Models;
@@ -17,6 +18,7 @@ public sealed class MappingController : ControllerBase
     public MappingController()
     {
         _mapper = new();
+        _mapper.AddMacro("cod-loc", new CodLocationMacro());
     }
 
     [HttpPost("run")]

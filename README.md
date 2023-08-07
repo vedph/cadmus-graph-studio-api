@@ -12,6 +12,8 @@ docker build . -t vedph2020/cadmus-graph-studio-api:0.0.7 -t vedph2020/cadmus-gr
 
 ## History
 
+- 2023-08-07: updated packages and added `cod-loc` macro.
+- 2023-07-01: updated packages.
 - 2023-06-30: updated packages.
 - 2023-06-17: updated packages.
 - 2023-06-14: updated packages.
