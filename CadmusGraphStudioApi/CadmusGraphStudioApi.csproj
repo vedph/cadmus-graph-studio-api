@@ -4,17 +4,17 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
-		<Version>0.0.7</Version>
-		<FileVersion>0.0.7</FileVersion>
-		<AssemblyVersion>0.0.7</AssemblyVersion>
+		<Version>0.0.9</Version>
+		<FileVersion>0.0.9</FileVersion>
+		<AssemblyVersion>0.0.9</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cadmus.Codicology.Graph" Version="0.0.1" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
+		<PackageReference Include="Cadmus.Codicology.Graph" Version="5.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-		<PackageReference Include="Cadmus.Graph" Version="3.0.5" />
-		<PackageReference Include="Cadmus.Graph.Extras" Version="3.0.5" />
+		<PackageReference Include="Cadmus.Graph" Version="3.0.7" />
+		<PackageReference Include="Cadmus.Graph.Extras" Version="3.0.7" />
 	</ItemGroup>
 
 </Project>
