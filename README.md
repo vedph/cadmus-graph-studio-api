@@ -1,4 +1,4 @@
-# Graph Studio API
+﻿# Graph Studio API
 
 This is a minimal API used to provide some basic tooling to the [Graph Studio web application](https://github.com/vedph/cadmus-graph-studio-app).
 
@@ -12,6 +12,7 @@ docker build . -t vedph2020/cadmus-graph-studio-api:0.0.9 -t vedph2020/cadmus-gr
 
 ## History
 
+- 2023-11-18: ⚠️ Upgraded to .NET 8.
 - 2023-11-09: updated packages.
 - 2023-10-05: updated packages.
 
