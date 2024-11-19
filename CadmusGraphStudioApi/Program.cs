@@ -1,23 +1,22 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using System.Collections.Generic;
 using System.Collections;
 using System;
 using System.Linq;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
+using Scalar.AspNetCore;
 
 namespace CadmusGraphStudioApi;
 
-public sealed class Program
+public static class Program
 {
     private static void DumpEnvironmentVars()
     {
         Console.WriteLine("ENVIRONMENT VARIABLES:");
         IDictionary dct = Environment.GetEnvironmentVariables();
-        List<string> keys = new();
+        List<string> keys = [];
         var enumerator = dct.GetEnumerator();
         while (enumerator.MoveNext())
         {
@@ -31,7 +30,7 @@ public sealed class Program
     private static void ConfigureCorsServices(IServiceCollection services,
         IConfiguration configuration)
     {
-        string[] origins = new[] { "http://localhost:4200" };
+        string[] origins = ["http://localhost:4200"];
 
         IConfigurationSection section = configuration.GetSection("AllowedOrigins");
         if (section.Exists())
@@ -70,20 +69,16 @@ public sealed class Program
 
             // Swagger/OpenAPI: https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddOpenApi();
 
             var app = builder.Build();
-
-            // configure the HTTP request pipeline
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
 
             app.UseCors("CorsPolicy");
             app.UseAuthorization();
             app.MapControllers();
+            app.MapOpenApi();
+            app.MapScalarApiReference();
+
             app.Run();
             return 0;
         }

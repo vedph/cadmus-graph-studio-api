@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Version>0.0.9</Version>
@@ -10,11 +10,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cadmus.Codicology.Graph" Version="6.0.1" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-		<PackageReference Include="Cadmus.Graph" Version="5.0.2" />
-		<PackageReference Include="Cadmus.Graph.Extras" Version="5.0.2" />
+		<PackageReference Include="Cadmus.Codicology.Graph" Version="7.0.0" />
+		<PackageReference Include="Cadmus.Graph" Version="8.0.0" />
+		<PackageReference Include="Cadmus.Graph.Extras" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+		<PackageReference Include="Scalar.AspNetCore" Version="1.2.39" />
 	</ItemGroup>
 
 </Project>
