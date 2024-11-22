@@ -12,6 +12,7 @@ docker build . -t vedph2020/cadmus-graph-studio-api:0.0.9 -t vedph2020/cadmus-gr
 
 ## History
 
+- 2024-11-22: updated packages.
 - 2024-11-20: updated packages.
 - 2024-11-19: ⚠️ upgraded to .NET 9 and replaced Swagger with Scalar.
 - 2023-11-21: updated packages.
