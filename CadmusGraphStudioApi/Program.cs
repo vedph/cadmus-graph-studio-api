@@ -77,7 +77,8 @@ public static class Program
             app.UseAuthorization();
             app.MapControllers();
             app.MapOpenApi();
-            app.MapScalarApiReference();
+            app.MapScalarApiReference(options =>
+                options.WithTitle("Cadmus Graph Studio API"));
 
             app.Run();
             return 0;
