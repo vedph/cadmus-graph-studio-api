@@ -5,13 +5,16 @@ This is a minimal API used to provide some basic tooling to the [Graph Studio we
 Quick **Docker** image build:
 
 ```bash
-docker build . -t vedph2020/cadmus-graph-studio-api:0.0.9 -t vedph2020/cadmus-graph-studio-api:latest
+docker buildx create --use
+
+docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/arm64 -t vedph2020/cadmus-graph-studio-api:0.0.9 -t vedph2020/cadmus-graph-studio-api:latest --push
 ```
 
 (replace with the current version).
 
 ## History
 
+- 2025-03-10: updated packages.
 - 2024-12-12: updated packages.
 - 2024-11-22: updated packages.
 - 2024-11-20: updated packages.
