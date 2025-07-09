@@ -13,8 +13,8 @@
 		<PackageReference Include="Cadmus.Codicology.Graph" Version="8.0.1" />
 		<PackageReference Include="Cadmus.Graph" Version="8.0.8" />
 		<PackageReference Include="Cadmus.Graph.Extras" Version="8.0.8" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
-		<PackageReference Include="Scalar.AspNetCore" Version="2.4.13" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
+		<PackageReference Include="Scalar.AspNetCore" Version="2.5.6" />
 	</ItemGroup>
 
 </Project>
