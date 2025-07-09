@@ -33,9 +33,12 @@ public sealed class MappingController : ControllerBase
             // mock metadata from item
             _mapper.Data[ItemGraphSourceAdapter.M_ITEM_ID] = model.ItemId
                 ?? Guid.NewGuid().ToString();
-            _mapper.Data[ItemGraphSourceAdapter.M_ITEM_FACET] = model.FacetId;
+            _mapper.Data[ItemGraphSourceAdapter.M_ITEM_FACET] =
+                model.FacetId ?? "";
+
             if (model.ItemTitle != null)
                 _mapper.Data[ItemGraphSourceAdapter.M_ITEM_TITLE] = model.ItemTitle;
+
             if (model.GroupId != null)
                 _mapper.Data[ItemGraphSourceAdapter.M_ITEM_GROUP] = model.GroupId;
 
@@ -49,8 +52,8 @@ public sealed class MappingController : ControllerBase
             }
 
             if (model.Flags != null) _mapper.Data["flags"] = model.Flags;
-            _mapper.Data["item-uri"] = model.ItemUri;
-            _mapper.Data["item-label"] = model.ItemLabel;
+            _mapper.Data["item-uri"] = model.ItemUri ?? "";
+            _mapper.Data["item-label"] = model.ItemLabel ?? "";
 
             // mock metadata from part
             _mapper.Data[PartGraphSourceAdapter.M_PART_ID] = model.PartId

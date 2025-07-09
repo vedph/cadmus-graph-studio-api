@@ -76,7 +76,7 @@ public sealed class NodeMappingBindingModel
     /// <summary>
     /// The source expression representing the data selected by this mapping.
     /// </summary>
-    [Required]
+    [Required(AllowEmptyStrings = true)]
     public string Source { get; set; }
 
     /// <summary>
