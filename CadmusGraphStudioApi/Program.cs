@@ -35,9 +35,9 @@ public static class Program
         IConfigurationSection section = configuration.GetSection("AllowedOrigins");
         if (section.Exists())
         {
-            origins = section.AsEnumerable()
+            origins = [.. section.AsEnumerable()
                 .Where(p => !string.IsNullOrEmpty(p.Value))
-                .Select(p => p.Value!).ToArray();
+                .Select(p => p.Value!)];
         }
 
         services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>

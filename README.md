@@ -14,6 +14,7 @@ docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/a
 
 ## History
 
+- 2025-07-10: added HTTP file.
 - 2025-07-09:
   - updated packages.
   - fixes to run model.
