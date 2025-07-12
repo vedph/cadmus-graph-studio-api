@@ -4,9 +4,9 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
-		<Version>0.0.9</Version>
-		<FileVersion>0.0.9</FileVersion>
-		<AssemblyVersion>0.0.9</AssemblyVersion>
+		<Version>0.0.10</Version>
+		<FileVersion>0.0.10</FileVersion>
+		<AssemblyVersion>0.0.10</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,7 +14,7 @@
 		<PackageReference Include="Cadmus.Graph" Version="8.0.9" />
 		<PackageReference Include="Cadmus.Graph.Extras" Version="8.0.9" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
-		<PackageReference Include="Scalar.AspNetCore" Version="2.5.6" />
+		<PackageReference Include="Scalar.AspNetCore" Version="2.6.0" />
 	</ItemGroup>
 
 </Project>
