@@ -28,7 +28,7 @@ public static class Program
     }
 
     private static void ConfigureCorsServices(IServiceCollection services,
-        IConfiguration configuration)
+        ConfigurationManager configuration)
     {
         string[] origins = ["http://localhost:4200"];
 
