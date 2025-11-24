@@ -14,6 +14,7 @@ docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/a
 
 ## History
 
+- 2025-11-24: ⚠️ upgraded to NET 10.
 - 2025-11-07: updated packages.
 - 2025-09-18: updated packages.
 
