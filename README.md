@@ -14,6 +14,8 @@ docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64 -t vedph2
 
 ## History
 
+- 2026-06-13: updated packages.
+
 ### 1.0.0
 
 - 2026-05-05: updated packages.
