@@ -104,9 +104,9 @@ public sealed class NodeMappingBindingModel
         Source = "";
     }
 
-    public NodeMapping ToNodeMapping()
+    public GraphNodeMapping ToNodeMapping()
     {
-        return new NodeMapping
+        return new GraphNodeMapping
         {
             Id = Id,
             ParentId = ParentId,
@@ -124,8 +124,7 @@ public sealed class NodeMappingBindingModel
             Sid = Sid,
             ScalarPattern = ScalarPattern,
             Output = Output?.ToNodeMappingOutput(),
-            Children = Children?.Select(m => m.ToNodeMapping())?.ToArray()
-                ?? Array.Empty<NodeMapping>()
+            Children = Children?.Select(m => m.ToNodeMapping())?.ToArray() ?? []
         };
     }
 }

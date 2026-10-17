@@ -1,11 +1,12 @@
-﻿using Cadmus.Codicology.Graph;
-using Cadmus.Graph;
+﻿using Cadmus.Graph;
 using Cadmus.Graph.Adapters;
 using Cadmus.Graph.Extras;
 using CadmusGraphStudioApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Diagnostics;
+using Cadmus.Codicology.Mapping;
+using Cadmus.Export.Mapping;
 
 namespace CadmusGraphStudioApi.Controllers;
 
@@ -13,7 +14,7 @@ namespace CadmusGraphStudioApi.Controllers;
 [Route("api/mappings")]
 public sealed class MappingController : ControllerBase
 {
-    private readonly JsonNodeMapper _mapper;
+    private readonly JsonGraphNodeMapper _mapper;
 
     public MappingController()
     {
