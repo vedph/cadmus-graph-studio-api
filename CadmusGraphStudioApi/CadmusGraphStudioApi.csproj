@@ -10,11 +10,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cadmus.Codicology.Mapping" Version="16.0.12" />
-		<PackageReference Include="Cadmus.Graph" Version="16.0.12" />
-		<PackageReference Include="Cadmus.Graph.Extras" Version="16.0.12" />
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.13" />
-		<PackageReference Include="Scalar.AspNetCore" Version="2.18.0" />
+		<PackageReference Include="Cadmus.Codicology.Mapping" Version="17.1.0" />
+		<PackageReference Include="Cadmus.Graph" Version="17.1.0" />
+		<PackageReference Include="Cadmus.Graph.Extras" Version="17.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.14" />
+		<PackageReference Include="Scalar.AspNetCore" Version="2.19.0" />
 	</ItemGroup>
 
 </Project>
