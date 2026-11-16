@@ -1,5 +1,7 @@
 ﻿# Graph Studio API
 
+⚠️⚠️⚠️ **THIS IS OBSOLETE CODE. SEE <https://github.com/vedph/cadmus-core>** ⚠️⚠️⚠️
+
 This is a minimal API used to provide some basic tooling to the [Graph Studio web application](https://github.com/vedph/cadmus-graph-studio-app).
 
 🐋 Quick Docker image build:
